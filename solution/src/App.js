@@ -10,9 +10,9 @@ function App() {
       <form>
         <div>
           <label>
-            Name:
-            <input type="text" name="name" />
+            Name:  
           </label>
+          <input type="text" name="name" />
         </div>
         <Location></Location>
         <input type="submit" value="Submit" />

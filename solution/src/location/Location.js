@@ -22,15 +22,15 @@ function Location() {
     <div className="Location">
       <label>
         Location:
-        <select name="location" onChange={e => handleLocationSelect(e)} value={selectedLocation} >
-          <option value="select location">select location</option>
-          {locationList.map((location) => (
-          <option value={location}>
-            {location}
-          </option>
-          ))}
-        </select>
       </label>
+      <select name="location" onChange={e => handleLocationSelect(e)} value={selectedLocation} >
+        <option value="select location">select location</option>
+        {locationList.map((location) => (
+        <option value={location}>
+          {location}
+        </option>
+        ))}
+      </select>
     </div>
 
   );
