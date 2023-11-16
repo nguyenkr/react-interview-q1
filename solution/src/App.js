@@ -8,10 +8,10 @@ function App() {
 
   return (
     <div className="App">
-      <form>
+      <form id="register" name="register">
         <Name></Name>
         <Location></Location>
-        <input type="submit" value="Submit" />
+        <button name="button" id="button">Submit</button>
       </form>
     </div>
   );

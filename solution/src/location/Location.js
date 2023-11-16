@@ -19,9 +19,9 @@ function Location() {
   }
   
   return (
-    <div className="Location">
+    <p className="Location">
       <label>
-        Location:
+        Location
       </label>
       <select name="location" onChange={e => handleLocationSelect(e)} value={selectedLocation} >
         <option value="select location">select location</option>
@@ -31,7 +31,7 @@ function Location() {
         </option>
         ))}
       </select>
-    </div>
+    </p>
 
   );
 }

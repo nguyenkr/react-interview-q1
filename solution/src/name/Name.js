@@ -12,13 +12,13 @@ function Name() {
   }
 
   return (
-    <div className="Name">
+    <p className="Name error">
       <label>
-        Name:  
+        Name  
       </label>
       <input type="text" name="name" onChange={(event) => onNameChange(event)}/>
       {showNameError && <FormErrors errorMessage={"Name is Invalid"}></FormErrors>}
-    </div>
+    </p>
   );
 }
 

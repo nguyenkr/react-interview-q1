@@ -5,7 +5,7 @@ function FormErrors({errorMessage}) {
 
   return (
     <div className="FormErrors">
-      <span>{errorMessage}</span>
+      {errorMessage}
     </div>
   );
 }
