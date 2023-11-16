@@ -19,19 +19,21 @@ function Location() {
   }
   
   return (
-    <p className="Location">
-      <label>
-        Location
-      </label>
-      <select name="location" onChange={e => handleLocationSelect(e)} value={selectedLocation} >
-        <option value="select location">select location</option>
-        {locationList.map((location) => (
-        <option value={location}>
-          {location}
-        </option>
-        ))}
-      </select>
-    </p>
+    <div className="Location row">
+      <div className="col-25">
+        <label>Location</label>
+      </div>
+      <div className="col-75">
+        <select name="location" onChange={e => handleLocationSelect(e)} value={selectedLocation} >
+          <option value="select location">select location</option>
+          {locationList.map((location) => (
+          <option value={location}>
+            {location}
+          </option>
+          ))}
+        </select>
+      </div>
+    </div>
 
   );
 }

@@ -12,13 +12,15 @@ function Name() {
   }
 
   return (
-    <p className="Name error">
-      <label>
-        Name  
-      </label>
-      <input type="text" name="name" onChange={(event) => onNameChange(event)}/>
+    <div className="Name row">
+      <div className="col-25">
+        <label>Name</label>
+      </div>
+      <div className="col-75">
+        <input type="text" name="name" onChange={(event) => onNameChange(event)}/>
+      </div>
       {showNameError && <FormErrors errorMessage={"Name is Invalid"}></FormErrors>}
-    </p>
+    </div>
   );
 }
 
