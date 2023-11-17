@@ -34,10 +34,13 @@ function App() {
     setSelectedLocation(e.target.value);
   }
 
-  function submitForm(){
+  function addNames(){
     console.log("SUBMITTED!");
     console.log("Name: ", name);
     console.log("Location: ",  selectedLocation);
+  }
+  function clear(){
+    console.log("Clear HERE pls :3")
   }
 
   return (
@@ -48,9 +51,12 @@ function App() {
         <Name onNameChange={onNameChange} showNameError={showNameError} ></Name>
         <Location handleLocationSelect={handleLocationSelect}></Location>
         <div className="submit-button row">
-          <button disabled={showNameError} onClick={() =>submitForm()} name="button" id="button">Submit</button>
+          <button disabled={showNameError || !name} onClick={() =>addNames()} name="button" id="add-button">Add</button>
+          <button onClick={() =>clear()} name="button" id="clear-button">Clear</button>
         </div>
       </form>
+      
+
     </div>
   );
 }
