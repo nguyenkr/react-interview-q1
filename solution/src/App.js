@@ -48,8 +48,8 @@ function App() {
       <h2>Form</h2>
       <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
       <div id="register" name="register">
-        <Name onNameChange={onNameChange} showNameError={formValues.showNameError}></Name>
-        <Location handleLocationSelect={handleLocationSelect}></Location>
+        <Name onNameChange={onNameChange} formValues={formValues} nameValue={formValues.name} ></Name>
+        <Location handleLocationSelect={handleLocationSelect} selectedLocation={formValues.selectedLocation}></Location>
         <div className="submit-button row">
           <button disabled={formValues.showNameError || !formValues.name || !formValues.selectedLocation} onClick={() =>addNames()} name="button" id="add-button">Add</button>
           <button onClick={() =>clear()} name="button" id="clear-button">Clear</button>
