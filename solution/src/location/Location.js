@@ -20,7 +20,7 @@ function Location(props) {
         <select name="location" onChange={e => props.handleLocationSelect(e)}>
           <option value="select location">select location</option>
           {locationList.map((location) => (
-          <option value={location}>
+          <option key={location} value={location}>
             {location}
           </option>
           ))}

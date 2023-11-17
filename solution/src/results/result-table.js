@@ -5,15 +5,19 @@ function ResultTable( props ) {
   return (
     <div className="ResultTable">
     <table>
-      <tr>
-        <th>Name</th>
-        <th>Location</th>
-      </tr>
-      {props.nameList.map((person) =>(
+      <thead>
         <tr>
-          <td>{person.name}</td>
-          <td>{person.location}</td>
+          <th>Name</th>
+          <th>Location</th>
         </tr>
+      </thead>
+      {props.nameList.map((person) =>(
+        <tbody>
+          <tr>
+            <td>{person.name}</td>
+            <td>{person.location}</td>
+          </tr>
+        </tbody>
       ))}
     </table>
     </div>
