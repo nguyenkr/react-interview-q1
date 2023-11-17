@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getLocations } from '../mock-api/apis';
 
-function Location( {handleLocationSelect} ) {
+function Location(props) {
 
   const [locationList, setLocationList] = useState([]);
 
@@ -17,7 +17,7 @@ function Location( {handleLocationSelect} ) {
         <label>Location</label>
       </div>
       <div className="col-75">
-        <select name="location" onChange={e => handleLocationSelect(e)} >
+        <select name="location" onChange={e => props.handleLocationSelect(e)}>
           <option value="select location">select location</option>
           {locationList.map((location) => (
           <option value={location}>
