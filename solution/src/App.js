@@ -46,9 +46,11 @@ function App() {
   return (
     <div className="App">
       <h2>Form</h2>
-      <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+      <p>Resize the browser window to see the effect. 
+        When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other. 
+        To enable the Add button, both Name and Location must be fill out. Clear will refresh the list and reset the location, however it will keep the name in the text box </p>
       <div id="register" name="register">
-        <Name onNameChange={onNameChange}></Name>
+        <Name onNameChange={onNameChange} showNameError={formValues.showNameError}></Name>
         <Location handleLocationSelect={handleLocationSelect} selectedLocation={formValues.selectedLocation}></Location>
         <div className="submit-button row">
           <button disabled={formValues.showNameError || !formValues.name || !formValues.selectedLocation} onClick={() =>addNames()} name="button" id="add-button">Add</button>
