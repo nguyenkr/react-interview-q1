@@ -11,14 +11,14 @@ function ResultTable( props ) {
           <th>Location</th>
         </tr>
       </thead>
-      {props.nameList.map((person) =>(
-        <tbody>
-          <tr>
+      <tbody>
+        {props.nameList.map((person) =>(
+          <tr key={person.name}>
             <td>{person.name}</td>
             <td>{person.location}</td>
           </tr>
-        </tbody>
-      ))}
+        ))}
+      </tbody>
     </table>
     </div>
   );
