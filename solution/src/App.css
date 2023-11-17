@@ -29,6 +29,13 @@ button:hover {
   background-color: #45a049;
 }
 
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
 .App {
   border-radius: 5px;
   background-color: #f2f2f2;

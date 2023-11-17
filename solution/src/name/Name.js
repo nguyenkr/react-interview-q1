@@ -1,15 +1,7 @@
 import FormErrors from '../form-errors/form-error';
-import React, { useState } from 'react';
-import { isNameValid } from '../mock-api/apis';
+import React from 'react';
 
-function Name() {
-  const [showNameError, setShowNameError] = useState(false)
-
-  function onNameChange(event){
-    (async function () {
-      isNameValid(event.target.value).then((value) => setShowNameError(!value));
-    }());
-  }
+function Name(props) {
 
   return (
     <div className="Name row">
@@ -17,9 +9,9 @@ function Name() {
         <label>Name</label>
       </div>
       <div className="col-75">
-        <input type="text" name="name" onChange={(event) => onNameChange(event)}/>
+        <input type="text" name="name" onChange={event => props.onNameChange(event)}/>
       </div>
-      {showNameError && <FormErrors errorMessage={"Name is Invalid"}></FormErrors>}
+      {props.showNameError && <FormErrors errorMessage={"Name is Invalid"}></FormErrors>}
     </div>
   );
 }
